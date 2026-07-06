@@ -40,7 +40,6 @@ export default function App() {
   const [valueA, setValueA] = useState(0);
   const [valueB, setValueB] = useState(0);
   const [valueC, setValueC] = useState(0);
-  const [minimum, setMinimum] = useState(0);
   const [fullName, setFullName] = useState('');
   const [age, setAge] = useState('');
   const [occupation, setOccupation] = useState('');
@@ -73,8 +72,8 @@ export default function App() {
     );
   };
   const findMinimum = () => {
-    setMinimum(Math.min(valueA, valueB, valueC));
-    Alert.alert('Minimum Number is', minimum.toString());
+    const min = Math.min(valueA, valueB, valueC);
+    Alert.alert('Minimum Number is', min.toString());
   };
 
   return (
